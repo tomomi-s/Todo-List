@@ -1,0 +1,94 @@
+body{
+  background: #ffb793; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left, #ffb793 , #ff5e62); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(right, #ffb793, #ff5e62); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(right, #ffb793, #ff5e62); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to right, #ffb793 , #ff5e62); /* Standard syntax */
+  font-family: 'Raleway', sans-serif;
+}
+h2{
+	text-align: center;
+	color: #ffffff;
+	font-family: 'Lobster', cursive;
+}
+
+#todo-wrapper{
+	max-width: 400px;
+	margin: 0 auto;
+}
+
+#add{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 20px;
+	padding: 7px 10px;
+	background-color:rgba(255,255,255, 0.5);
+}
+
+.fa-plus{
+	padding: 0 4px;
+}
+
+input{
+	width: 100%;
+    height: 40px;
+    box-sizing : border-box;
+    padding: 0 7px;
+    border-width: 0;
+    font: 15px 'Raleway', sans-serif;
+    font-weight: 300;
+}
+
+input:focus{
+    outline-offset: -1px;
+    outline: #ff5e62 2px solid;
+}
+
+#lists{
+	margin: 0;
+	padding-left: 0px;
+}
+
+.list{
+	display: flex;
+	align-items: center;
+}
+
+.trashIcon{
+	display: none;
+	width: 32px;
+	height: 32px;
+	background-color: #000000;
+	text-align: center;
+	transform: translateX(-100%);
+	transition: transform, 0.5s ease-in-out;
+}
+
+.showTrashIcon{
+	display: block;
+	transform: translateX(0);
+}
+
+.fa-trash{
+	color: #ffffff;
+	padding: 8px 0;
+	// display: none;
+}
+
+.todo{
+	font-weight: 300;
+	padding: 6.5px 8px;
+}
+
+.todo-odd{
+	background-color: rgba(255,255,255, 0.2);
+}
+
+.todo-even{
+	background-color: rgba(255,255,255, 0.4);
+}
+.textBorder{
+	text-decoration-line: line-through;
+	color: gray;
+}
