@@ -7,7 +7,7 @@ $(document).ready(function() {
 		// var newTodos = [newList];
 		if(event.which === 13){
 			var newTodo = $("input").val();
-			var newList = '<li class="list"><div class="trashIcon"><i class="fa fa-trash" aria-hidden="true"></i></div><div class="todo">' + newTodo + '</div></li>';
+			var newList = '<li class="list"><span class="trashIcon"><i class="fa fa-trash" aria-hidden="true"></i></span><div class="todo">' + newTodo + '</div></li>';
 			$("#lists").append(newList);
 			$('input').val('');
 		}
@@ -16,17 +16,17 @@ $(document).ready(function() {
 		$("#lists li:even").addClass('todo-even');
 	});
 
-	$(document).on("mouseenter", ".list", function(){
-		// $(".trashIcon", this).show();
-		$(".trashIcon", this).addClass("showTrashIcon");
-		// $(".trashIcon", this).animate({ left: '0' }, 500); 
-	});
+	// $(document).on("mouseenter", ".list", function(){
+	// 	// $(".trashIcon", this).show();
+	// 	$(".trashIcon", this).addClass("showTrashIcon");
+	// 	// $(".trashIcon", this).animate({ left: '0' }, 500); 
+	// });
 
-	$(document).on("mouseleave", ".list", function(){
-		$(".trashIcon", this).removeClass("showTrashIcon");
-		// $(".trashIcon", this).animate({ left: '-32px' }, 500); 
-		// $(".trashIcon", this).hide();
-	});
+	// $(document).on("mouseleave", ".list", function(){
+	// 	$(".trashIcon", this).removeClass("showTrashIcon");
+	// 	// $(".trashIcon", this).animate({ left: '-32px' }, 500); 
+	// 	// $(".trashIcon", this).hide();
+	// });
 
 	$(document).on("click", ".trashIcon", function(){
 		$(this).parent().remove();
